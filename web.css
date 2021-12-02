@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;  
+}
+body{
+    width: 100%;
+    font-size: 1.125rem;
+}
+img{
+    width: 100%;
+}
+.container{
+    background-image: url(wall.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 2;
+}
+
+/* ***********navbar-starts****************** */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+    background-color: black;
+}
+.logo{
+    width: 5em;
+    padding: 0.4em;
+    transition: transform 0.5s linear;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links .nav-item{
+    list-style: none;
+    padding: 0.5em 1em;
+    text-transform: capitalize;
+}
+.nav-links .nav-item a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+.menu{
+    width: 30px;
+    display: none;  
+}
+.line{
+    background-color: white;
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+/* ***********navbar-end****************** */
+
+/* *********main************ */
+
+.main{
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    height: 88vh;
+    font-size: 5rem;  
+}
+.main h2{
+    text-align: center;
+}
+@media screen and (max-width: 998px) {
+    .logo{
+        transform: rotate(80deg); 
+        justify-content: center;
+    }
+    .navbar{
+        flex-direction: column;
+
+    }
+    .main{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 678px){
+    .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 30px;
+    }
+    .logo{
+        transform: rotate(0deg);
+    }
+    .nav-links {
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        display: none;
+    }
+    .nav-list .list-item {
+        display: block;
+        border-top: 1px solid white;
+    }
+    .menu{
+        display: block;
+    }
+    
+    .main{
+        font-size: 3rem;
+    }
+    .navbar.responsive.menu{
+        display: block;
+    }
+
+}

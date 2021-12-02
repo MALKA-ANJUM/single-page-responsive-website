@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <ul class="nav-links" id="navi">
+                <li class="nav-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">contact</a>
+                </li>
+            </ul>
+            <div class="menu" id="toggle-button" onclick="myFunction()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+        <div class="main">
+          <h2>Let's Travel Together!</h2>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navi");
+            if (x.className === "nav-links") {
+                x.className += " responsive";
+            } else {
+                 x.className = "nav-links";
+        }
+    }
+    </script>
+    
+</body>
+
+
+</html>
